@@ -1,7 +1,7 @@
 import { model, Schema } from 'mongoose'
 
 const Libro = new Schema({
-    title: {
+    titulo: {
         type: String,
         required: true
     },
@@ -9,11 +9,11 @@ const Libro = new Schema({
         type: String,
         required: true
     },
-    author: {
+    autor: {
         type: String,
         required: true
     },
-    año: {
+    year: {
         type: Number,
         required: true
     }

@@ -1,6 +1,6 @@
 import { model, Schema } from 'mongoose'
 
-const Author = new Schema({
+const Autor = new Schema({
     name: {
         type: String,
         required: true
@@ -15,6 +15,6 @@ const Author = new Schema({
     }       
 });
 
-const AuthorModel = model('Author', Author);
+const AutorModel = model('Autor', Autor);
 
-export { AuthorModel };
+export { AutorModel };
