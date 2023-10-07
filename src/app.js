@@ -4,6 +4,8 @@ import { connectToMongo } from './config/database.js';
 import fileUpload from 'express-fileupload';
 import morgan from 'morgan';
 import path from 'node:path';
+import { libroRouter } from './routes/libros.js';
+import { autorRouter } from './routes/autores.js';
 
 
 const app = express();
@@ -22,10 +24,13 @@ app.use(
 app.use(morgan("tiny"));
 
 // Settings
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
+// app.set("view engine", "ejs");
+// app.set("views", path.join(__dirname, "views"));
 
 
+// Routes
+app.use('/libros', libroRouter);
+app.use('/autores', autorRouter);
 
 
 // Servidor

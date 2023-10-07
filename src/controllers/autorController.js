@@ -26,7 +26,7 @@ export const ctrlGetAllAutores = async (req, res) => {
 }
 
 // obtener un autor
-export const ctrlGetAutorlById = async (req, res) => {
+export const ctrlGetAutorById = async (req, res) => {
     const autorId = req.body.id
 
     try {
