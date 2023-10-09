@@ -13,6 +13,8 @@ const Autor = new Schema({
         type: String,
         required: true
     }       
+}, {
+    timestamps: true
 });
 
 const AutorModel = model('Autor', Autor);

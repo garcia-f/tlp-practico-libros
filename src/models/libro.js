@@ -9,14 +9,17 @@ const Libro = new Schema({
         type: String,
         required: true
     },
-    autor: {
+    autor: [{
         type: String,
+        ref: "Autor",
         required: true
-    },
+    }],
     year: {
         type: Number,
         required: true
     }
+}, {
+    timestamps: true
 })
 
 const LibroModel = model('Libro', Libro)

@@ -1,4 +1,4 @@
-import { AutorModel } from '../models/Autor.js';
+import { AutorModel } from '../models/autor.js';
 
 // crear autor
 export const ctrlCreateNewAutor = async (req, res) => {
@@ -7,7 +7,7 @@ export const ctrlCreateNewAutor = async (req, res) => {
     try {
         const newAutor = new AutorModel({ name, lastName, bibliografia })
         await newAutor.save()
-        res.status(201).json(newAutor)
+        res.status(201).json({ message: 'Autor creado correctamente', newAutor })
     } catch (error) {
         console.log(error);
         res.status(500).json({ message: 'Error al crear el autor' })
