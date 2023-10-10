@@ -98,5 +98,20 @@ export const ctrlDeleteLibro = async (req, res) => {
 }
 
 
+// traer libro por genero
+export const ctrlGetLibrosByGenero = async (req, res) => {
+    const genero = req.params.genero
+    try {
+        const libros = await LibroModel.find({ genero })
+        if(!libros) {
+            return res.sendStatus(404).json({ message: 'Genero no encontrado' })
+        }
+        res.status(200).json(libros)
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: 'Error al obtener los libros por genero' }
+    }
+}
+
 
 

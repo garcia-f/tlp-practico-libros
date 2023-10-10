@@ -17,6 +17,10 @@ const Libro = new Schema({
     year: {
         type: Number,
         required: true
+    },
+    portada: {
+        type: String,
+        required: true
     }
 }, {
     timestamps: true
